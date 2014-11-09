@@ -29,13 +29,10 @@ class CldrInstaller extends \Composer\Installer\LibraryInstaller
      */
     public function __construct(IOInterface $io, Composer $composer)
     {
-        parent::__construct($io, $composer, 'assets');
+        parent::__construct($io, $composer, 'octris-cldr');
     }
 
-    /**
-     * Install CLDR data files.
-     */
-    public function installAction(PackageInterface $package, $action)
+    public function update(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
     {
     }
 }
